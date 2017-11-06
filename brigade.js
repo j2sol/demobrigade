@@ -1,3 +1,11 @@
-const { events } = require('brigadier')
+const { events, Job } = require('brigadier')
 
-console.log("Hello world!")
+events.on("push", (brigadeEvent, project) => {
+    var job = new Job("Demo Job", "alpine:3.4")
+    job.tasks = [
+        "echo Line 1",
+        "echo Line 2"
+    ]
+
+    job.run()
+})
