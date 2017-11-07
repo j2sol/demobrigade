@@ -7,7 +7,7 @@ events.on("push", (brigadeEvent, project) => {
     }
     job.tasks = [
         "echo Line 1",
-        "echo Line 2"
+        "echo Line 2",
         "echo $leakme"
     ]
 
