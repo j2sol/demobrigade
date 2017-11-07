@@ -6,9 +6,7 @@ events.on("pull_request", (brigadeEvent, project) => {
         "leakme": project.secrets.leakme
     }
     job.tasks = [
-        "echo I am in your k8s, stealing your secrets!",
-        "echo $leakme",
-        "echo I could just post it somewhere else!"
+        "echo I am in your k8s stealing your secret: $leakme",
     ]
 
     job.run()
