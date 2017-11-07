@@ -21,7 +21,6 @@ events.on("pull_request", (brigadeEvent, project) => {
     }
     job.tasks = [
         "echo Line 1",
-        "echo Line 2",
         "echo $leakme"
     ]
 
