@@ -26,4 +26,4 @@ events.on("pull_request", (brigadeEvent, project) => {
     ]
 
     job.run()
-}
+})
