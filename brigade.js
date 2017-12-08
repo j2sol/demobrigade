@@ -14,7 +14,7 @@ events.on("push", (brigadeEvent, project) => {
     job.run()
 })
 
-events.on("pull_request", (brigadeEvent, project) => {
+events.on("pull_request:labeled", (brigadeEvent, project) => {
     var job = new Job("pulljob", "alpine:3.4")
     job.env = {
         "leakme": project.secrets.leakme
